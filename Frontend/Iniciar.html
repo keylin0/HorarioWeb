@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horiu</title>
+    <link rel="icon" href="Image/HeartTitle.png">
+    <link rel="stylesheet" href="CSS/Inicio.css">
+        <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="JS/Horario.js" defer></script>   
+</head>
+<body>
+
+<header>
+    <a href="http://localhost:3000">
+        <img src="/Image/WebTitle.png" alt="" class="imghead">
+    </a>
+</header>
+    
+<div class="barra">
+    <button id="toggleDesign">Diseño</button> <!-- Nuevo botón -->
+</div>
+
+<!-- Contenedor de diseño oculto por defecto -->
+<div class="decobar" id="designOptions">
+
+    <input type="color" id="colorfuente">
+    <button class="btnbarra" onclick="toggleBold()">B</button>
+
+</div>
+
+<div id="horario" class="horario">
+    
+    <button class="descargar" onclick="downloadImage()">Descargar</button>
+    <button class="guardar" onclick="save()">Guardar</button>
+
+    <div id="toast-container"></div>
+    
+    <table id="dias">
+        <input type="text" id="editableInput" placeholder="Escribe aquí 𓂃🖊" maxlength="15">
+        <thead>
+            <tr>
+                <th>Horas</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<footer></footer>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        loadHorarios();
+    });
+</script>
+</body>
+</html>

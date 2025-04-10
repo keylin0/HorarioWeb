@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horiu</title>
+    <link rel="icon" href="Image/HeartTitle.png">
+    <link rel="stylesheet" href="CSS/Home.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <!-- Scripts -->
+    <script src="JS/Home.js" defer></script>
+    <script src="JS/check.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="homebar">
+            
+        <!-- Imagen principal -->
+            <a href="" class="logo">
+                <img src="Image/Titlebar.png" alt="Logo" class="icon">
+            </a>
+
+
+        <!-- Mini menú -->
+            <div class="etinav">
+              <span class="bar"></span> 
+              <span class="bar"></span>
+              <span class="bar"></span>  
+            </div>
+
+        <!-- Menú nav -->
+            <ul class="menud">
+                <li class="signbtn">
+                    <a href="/sign.html" id="signbutton" class="signbutton">Inicio sesión</a>
+                </li>
+                <li class="itembtn">
+                    <button id="deleteButton" style="display: none;">Eliminar cuenta</button>
+                </li>
+                <li class="logoutbtn">
+                    <button id="logoutButton" style="display: none;">Salir</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="contenido" >
+            <h1>Horarios en <span>línea</span></h1>
+            <h3 class="movim">Se <span></span></h3>
+            <a href="/Iniciar.html" id="iniciolink" class="iniciarbutton">Iniciar</a>  
+        </div>
+
+        <div class="homeimg" >
+            <img src="Image/HeartTitle.png" alt="">
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+    <div id="deletePopup" class="popup hidden">
+        <p>¿Eliminar tu cuenta?</p>
+        <button id="confirmDeleteButton">Sí</button>
+        <span class="close-popup" onclick="document.getElementById('deletePopup').classList.add('hidden')">X</span>
+    </div> 
+</body>
+</html>

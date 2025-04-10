@@ -1,0 +1,577 @@
+* { /* ---------------- Recet */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Balsamiq Sans";
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 50px;
+    transition: background 0.4s ease;
+    box-shadow: 0px -1px 10px hsla(0, 3%, 54%, 0.876);
+    z-index: 1000;
+}
+
+
+
+#toast-container {
+    position: absolute;
+    top: -20%; 
+    left: 135%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: max-content;
+    max-width: 200px;
+}
+
+.toast {
+    position: relative;
+    padding: 25px 13px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: hsl(270, 100%, 100%);
+    margin-top: 10px;
+    animation: bounceIn 0.4s ease;
+    transition: opacity 0.5s ease;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-weight: bold;
+    font-family: "Balsamiq Sans";
+}
+
+.toast.success {
+    color: #28a745;
+    font-size: 15px;
+}
+
+.toast.error {
+    color: #dc3545;
+    font-size: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -4px;
+    right: 10px;
+    color: #c8c8c8;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Caveat";
+    font-size: 30px;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+@keyframes bounceIn {
+    0%   { transform: scale(0.9) translateY(20px); opacity: 0; }
+    60%  { transform: scale(1.05) translateY(-5px); opacity: 1; }
+    80%  { transform: scale(0.97) translateY(2px); }
+    100% { transform: scale(1) translateY(0); }
+}
+
+
+
+.imghead {
+    position: fixed;
+    top: 14px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* --------------------------------- Decoración dentro del botón diseño*/ 
+#designOptions {
+    display: none; 
+}
+
+#toggleDesign {
+    padding: 2px 2px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: transparent;
+    font-family: "Caveat";
+    font-size: 20px;
+    left: 100px;
+    top: -70px;
+    z-index: 1;
+    position: flex;
+}
+
+#toggleDesign:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+#colorfuente {
+    cursor: pointer;
+    font-size: 13px;
+    width: 60px;
+    height: 27px;
+    border: none;
+    text-align: center;
+    appearance: none;
+    top: calc(100% + 10px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 4px;
+    border: 2px solid #0f0d0d;
+    border-radius: 10px;
+    background: transparent;
+}
+
+#colorfuente:hover {
+    transform: scale(0.9);
+}
+
+::selection {
+    background: hsla(0, 0%, 80%, 0.395);
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.btnbarra {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%; 
+    font-family: "Madimi One";
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 1px 13px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+
+.decobar {
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    align-items: center;
+    position: absolute;
+    width: 160px;
+    left: 8%;
+    top: 35%;
+}
+
+.decobar.active {
+    display: flex;
+}
+
+.decobar select {
+    font-size: 12px;
+    margin: 10px 20px;
+    font-family: "Madimi One";
+}
+
+/* ---------------------------------Botones externos*/
+
+.descargar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 87%;
+    top: 17%;
+    justify-content: flex-end;
+    font-size: 23px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background: transparent;
+}
+
+.descargar:hover {
+    background-color:#ccc;
+    filter: brightness(1.2);
+}
+
+.guardar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 81%;
+    top: 17%;
+    justify-content: flex-end;
+    font-size: 23px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background: transparent;
+}
+
+.guardar:hover {
+    background-color:#ccc;
+    filter: brightness(1.2);
+}
+
+button {
+    padding: 1px 10px;
+    margin: 2px;
+    border: none;
+    background: transparent;
+    color: #000000;
+    cursor: pointer;
+    font-family: "Caveat";
+    font-size: 25px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* ------------------------------- Diseño de tabla */
+
+#editableInput {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    font-family: "Balsamiq Sans";
+}
+
+#dias {
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 60px;
+    margin: 10px;
+    border: none;
+}
+
+#dias th, #dias td {
+    border: 1px solid #9e9797;
+    padding: 18px;
+    text-align: center;
+    background: #fff;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+#dias th {
+    background: #c4699260;    
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.horario {
+    padding: 15px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 26%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(93, 107, 152, 0.485);
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------- Media Query ---------------------------- */
+
+@media (max-width: 1500px) {
+    header {
+        display: flex;
+        transition: all 0.4s ease-in-out;  
+    }
+
+    .imghead {
+        width: 100px; 
+        transition: height 0.3s ease-in-out; 
+    }
+
+    .barra {
+        left: 8%;
+        top: 20%;
+        padding: 10px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .decobar {
+        width: 140px;
+        left: 5%;
+        top: 28%;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .btnbarra {
+        flex-direction: column;
+        padding: 2px 13px;
+        font-size: 14px;
+        gap: 10px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .limpiartabla {
+        right: 10px;
+        top: 810px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .descargar, .guardar {
+        left: 80%;
+        top: 16%;
+        font-size: 20px;
+        transform: rotateX(-50%);
+        transition: all 0.3s ease-in-out; 
+    } 
+
+    .descargar {
+        margin-right: 20%;
+        transition: margin-right 0.3s ease-in-out; 
+    }
+
+    .guardar {
+        margin-left: -7%; 
+        transition: margin-left 0.3s ease-in-out; 
+    }
+
+    .horario {
+        position: absolute;
+        font-size: 15px;
+        left: 25%;
+        top: 230px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    footer {
+        height: 40px;
+        transition: height 0.3s ease-in-out;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    header {
+        display: flex;
+        transition: all 0.4s ease-in-out; 
+    }
+
+    .imghead {
+        width: 100px; 
+        transition: height 0.3s ease-in-out; 
+    }
+
+    .barra {
+        left: 12%;
+        top: 19%;
+        padding: 15px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .decobar {
+        width: 160px;
+        left: 8%;
+        top: 28%;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .btnbarra {
+        flex-direction: row;
+        border-radius: 10px;
+        padding: 2px 13px;
+        gap: 12px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .limpiartabla {
+        right: 15px;
+        top: 790px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .descargar, .guardar {
+        left: 85%;
+        top: 15%;
+        font-size: 20px;
+        transform: rotateX(-50%);
+        transition: all 0.3s ease-in-out; 
+    } 
+
+    .descargar {
+        margin-right: 18%;
+        transition: margin-right 0.3s ease-in-out; 
+    }
+
+    .guardar {
+        margin-left: -10%; 
+        transition: margin-left 0.3s ease-in-out; 
+    }
+
+    .horario {
+        position: absolute;
+        font-size: 15px;
+        left: 30%;
+        top: 230px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    footer {
+        height: 45px;
+        transition: height 0.3s ease-in-out;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        transition: all 0.3s ease-in-out;
+    }
+
+    header {
+        display: flex;
+        transition: all 0.3s ease-in-out;
+        padding: 45px 0px;
+        box-shadow: none;
+    }
+
+    .imghead {
+        width: 70px; 
+        max-width: 80px;
+        margin-top: 5px;
+        transition: height 0.3s ease-in-out; 
+    }
+
+    .barra {
+        left: 10%;
+        top: 17%;
+        padding: 10px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .decobar {
+        position: relative;
+        width: 65%;
+        left: 9%;
+        top: 145px;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center; 
+        padding: 5px;  
+        transition: all 0.3s ease-in-out;
+    }
+
+    .decobar select,
+    .tmfuente input {
+        font-size: 12px;
+        margin: 10px 5px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .tmfuente {
+        display: flex;
+        font-size: 12px;
+        margin-right: 13px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .btnbarra {
+        padding: 5px;
+        margin-top: 5px;
+        margin: 10px;
+        gap: 5px;
+        flex-direction: row;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .limpiartabla {
+        right: 10px;
+        top: 810px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .descargar, .guardar {
+        left: 80%;
+        top: 10%;
+        font-size: 20px;
+        transform: rotateX(-50%);
+        transition: all 0.3s ease-in-out; 
+    } 
+
+    .descargar {
+        margin-right: 20%;
+        transition: margin-right 0.3s ease-in-out; 
+    }
+
+    .guardar {
+        margin-left: -16%; 
+        transition: margin-left 0.3s ease-in-out; 
+    }
+
+    #fuentes {
+        display: flex;
+        margin-left: 15px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    #colorfuente {
+        width: 100px;
+        margin-right: 12px;
+        transition: width 0.3s ease-in-out; 
+    }
+
+    #dias {
+        width: 100%;
+        transition: width 0.3s ease-in-out; 
+    }
+
+    .horario {
+        position: absolute;
+        padding: 1px;
+        font-size: 15px;
+        left: 7%;
+        top: 230px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    footer {
+        height: 35px;
+        transition: height 0.3s ease-in-out; 
+    }
+}

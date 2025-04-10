@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(23, 28, 43);
+    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
+    font-family: "Balsamiq Sans";
+}
+
+.homeimg {
+    flex-shrink: 0;
+    top: 300px;
+    width: 25vw;
+    max-width: 350px;
+    min-width: 200px;
+    margin-left: 17rem;
+    margin-right: 3rem;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 25px bisque;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.homeimg:hover {
+    box-shadow: 0 0 25px cornflowerblue,
+                0 0 50px cornflowerblue,
+                0 0 100px cornflowerblue;
+}
+
+
+form {
+    margin: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ---------------------------------- Contenedor*/
+.titulo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 4px;
+    margin-bottom: 0 4px;
+}
+
+.formcont {
+    background:#fff;
+    width: 450px;
+    padding: 15px;
+    margin: -100px 900px;
+    border-radius: 10px;
+    box-shadow: 0 18px 35px #b28ab8a0;
+}
+.formsign {
+    background:#fff;
+    width: 450px;
+    padding: 15px;
+    margin: -100px 900px;
+    border-radius:10px;
+    box-shadow:0 18px 35px #b28ab8a0;
+}
+
+.formcont input, .formsign input {
+    background: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+.msgerror {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+input:focus {
+    outline: transparent;
+    border-bottom: 2px solid hwb(327 19% 41%);  
+}
+/* ---------------------------------- Botones de inicio sesión y registro*/
+#btnini {
+    font-size: 17px;
+    padding:7px 20px;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    background:#5c5ca0;
+    color:white;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+#btnini:hover {
+    background:hwb(254 24% 22% / 0.412);
+    transform: scale(1.1);
+}
+
+#btnregi {
+    font-size: 17px;
+    padding:7px 20px;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    background:#5c5ca0;
+    color:white;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+#btnregi:hover {
+    background:hwb(254 24% 22% / 0.412);
+    transform: scale(1.1);
+}
+
+/* ----------------------------------Link tienes o no cuenta*/
+button {
+    color:hsl(240, 33%, 68%);
+    border:none;
+    margin: 35px;
+    background-color:transparent;
+    font-size: 12px;
+    font-weight:bold;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+button:hover {
+    text-decoration:underline;
+}
+
+/* -------------------------------------- Media Query ---------------------------- */
+
+@media (max-width: 1280px) {
+    .homeimg {
+        width: 30vw; 
+        margin-bottom: 2rem;
+        top: 300px;
+        left: -160px;
+        transition: all 0.4s ease-in-out;
+    }
+    .formcont, .formsign {
+        width: 10px;
+        margin: -100px 600px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .homeimg {
+        margin-bottom: 2rem;
+        top: 300px;
+        left: -160px;
+        transition: all 0.4s ease-in-out;
+    }
+    .formcont, .formsign {
+        width: 40%;
+        margin: -100px 500px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeimg {
+        position: absolute;
+        top: 100px;
+        left: -20px;
+        transform: translateX(-50%);
+        margin-top: -50px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .formcont, .formsign {
+        width: 400px;
+        margin: 265px 50px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+        transition: all 0.4s ease-in-out;
+    }
+}

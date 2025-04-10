@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horiu</title>
+    <link rel="icon" href="Image/HeartTitle.png">
+    <link rel="stylesheet" href="CSS/Sign.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="JS/sign.js" defer></script>
+    <script src="JS/auth.js" defer></script>
+
+</head>
+<body>
+
+    <a href="http://localhost:3000">
+        <img src="Image/HeartTitle.png" alt="" class="homeimg">
+    </a>
+
+    <div class="formcont" id="conteregi" style="display:none;" >
+        <form>
+            <h1 class="titulo" >Registrarse</h1>
+            <input type="text" id="reginame" placeholder="Usuario">
+            <input type="email" id="regiemail" placeholder="Email">
+            <input type="password" id="regicontra" placeholder="Contraseña">
+
+            <input class="sign" type="submit" id="btnregi" value="Registrarse">
+
+            <button class="btnsesion" id="btnsesion">¿Ya tienes una cuenta?</button>
+
+            <p id="regierror" class="msgerror"></p>
+        </form>
+    </div>
+
+    <div class="formsign" id="contesesion">
+        <form>
+            <h1 class="titulo" >Iniciar sesión</h1>
+            <input type="text" id="ininame"placeholder="Usuario">
+            <input type="password" id="inicontra" placeholder="Contraseña">
+
+            <input class="sign" type="submit" id="btnini" value="Iniciar sesión">
+
+            <button class="btnregi" id="iniciobtn">¿Aún no tienes una cuenta?</button>
+            
+            <p id="inierror" class="msgerror"></p>
+        </form>
+    </div>
+</body>
+</html>
