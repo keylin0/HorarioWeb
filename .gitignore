@@ -1,5 +1,5 @@
 # Ignora archivos de entorno
-.env
+Backend/.env
 
 # Node modules
-node_modules/
+Backend/node_modules
